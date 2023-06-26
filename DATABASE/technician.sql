@@ -1,5 +1,5 @@
 --------------------------------------------------------
---  File created - Saturday-June-24-2023   
+--  File created - Monday-June-26-2023   
 --------------------------------------------------------
 --------------------------------------------------------
 --  DDL for Table TECHNICIAN
@@ -18,9 +18,9 @@
   TABLESPACE "SYSTEM" ;
 REM INSERTING into HOMESTAY.TECHNICIAN
 SET DEFINE OFF;
-Insert into HOMESTAY.TECHNICIAN (TECHID,TECHNAME,TECHNO,TECHFIELD,STAFFID) values (2,'Masitah Shira','0193249683','Plumber',null);
-Insert into HOMESTAY.TECHNICIAN (TECHID,TECHNAME,TECHNO,TECHFIELD,STAFFID) values (3,'Ahmad Azim','0104926583','Electrician',null);
-Insert into HOMESTAY.TECHNICIAN (TECHID,TECHNAME,TECHNO,TECHFIELD,STAFFID) values (4,'Muhammad Hazim','0169992380','Computer technician',null);
+Insert into HOMESTAY.TECHNICIAN (TECHID,TECHNAME,TECHNO,TECHFIELD,STAFFID) values (2,'Masitah Shira','0193249683','Cleaner',7);
+Insert into HOMESTAY.TECHNICIAN (TECHID,TECHNAME,TECHNO,TECHFIELD,STAFFID) values (3,'Ahmad Azim','0104926583','General Technician',7);
+Insert into HOMESTAY.TECHNICIAN (TECHID,TECHNAME,TECHNO,TECHFIELD,STAFFID) values (4,'Muhammad Hazim','0169992380','Interior Designer',7);
 --------------------------------------------------------
 --  DDL for Index TECHID_PK
 --------------------------------------------------------
