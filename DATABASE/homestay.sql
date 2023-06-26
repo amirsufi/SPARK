@@ -1,5 +1,5 @@
 --------------------------------------------------------
---  File created - Saturday-June-24-2023   
+--  File created - Monday-June-26-2023   
 --------------------------------------------------------
 --------------------------------------------------------
 --  DDL for Table HOMESTAY
@@ -19,7 +19,7 @@
   TABLESPACE "SYSTEM" ;
 REM INSERTING into HOMESTAY.HOMESTAY
 SET DEFINE OFF;
-Insert into HOMESTAY.HOMESTAY (HOMESTAYID,HOMESTAYNAME,ADDRESS,OFFICENO,RENTPRICE,STAFFID) values (1,'Twin Villa Homestay','Jalan Badik 11/4, Shah Alam, Selangor, Malaysia','03-421-2098',500,null);
+Insert into HOMESTAY.HOMESTAY (HOMESTAYID,HOMESTAYNAME,ADDRESS,OFFICENO,RENTPRICE,STAFFID) values (1,'Twin Villa Homestay','Jalan Badik 11/4, Shah Alam, Selangor, Malaysia','03-421-2098',500,4);
 --------------------------------------------------------
 --  DDL for Index BOOKINGID_PK
 --------------------------------------------------------
