@@ -1,5 +1,5 @@
 --------------------------------------------------------
---  File created - Saturday-June-24-2023   
+--  File created - Monday-June-26-2023   
 --------------------------------------------------------
 --------------------------------------------------------
 --  DDL for Table MAINTENANCE
@@ -21,6 +21,9 @@
   TABLESPACE "SYSTEM" ;
 REM INSERTING into HOMESTAY.MAINTENANCE
 SET DEFINE OFF;
+Insert into HOMESTAY.MAINTENANCE (MAINID,MAINNAME,MAINPAYMENT,MAINDESC,MAINDATE,MAINSTATUS,BOOKINGID,TECHID) values (1,'Preventive Maintenance',300,'Homestay cleaning',to_date('08/04/2023','DD/MM/RRRR'),'Completed',1,2);
+Insert into HOMESTAY.MAINTENANCE (MAINID,MAINNAME,MAINPAYMENT,MAINDESC,MAINDATE,MAINSTATUS,BOOKINGID,TECHID) values (2,'Corrective Maintenance',600,'Homestay repair',to_date('24/05/2023','DD/MM/RRRR'),'On Hold',1,3);
+Insert into HOMESTAY.MAINTENANCE (MAINID,MAINNAME,MAINPAYMENT,MAINDESC,MAINDATE,MAINSTATUS,BOOKINGID,TECHID) values (3,'Condition-based Maintenance',1000,'Facilities maintenance',to_date('21/02/2023','DD/MM/RRRR'),'Pending',1,4);
 --------------------------------------------------------
 --  DDL for Index MAINID_PK
 --------------------------------------------------------
