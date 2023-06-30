@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "SPARK",
+			"path": ".."
+		},
+		{
+			"name": "BookingGuest",
+			"path": "../../../Nicepage Templates/BookingGuest"
+		}
+	],
+	"settings": {}
+}
