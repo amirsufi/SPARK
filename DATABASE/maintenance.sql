@@ -21,9 +21,9 @@
   TABLESPACE "SYSTEM" ;
 REM INSERTING into HOMESTAY.MAINTENANCE
 SET DEFINE OFF;
-Insert into HOMESTAY.MAINTENANCE (MAINID,MAINNAME,MAINPAYMENT,MAINDESC,MAINDATE,MAINSTATUS,TECHID,HOMESTAYID) values (1,'Preventive Maintenance',300,'Homestay cleaning',to_date('08/04/2023','DD/MM/RRRR'),'Completed',2,null);
-Insert into HOMESTAY.MAINTENANCE (MAINID,MAINNAME,MAINPAYMENT,MAINDESC,MAINDATE,MAINSTATUS,TECHID,HOMESTAYID) values (2,'Corrective Maintenance',600,'Homestay repair',to_date('24/05/2023','DD/MM/RRRR'),'On Hold',3,null);
-Insert into HOMESTAY.MAINTENANCE (MAINID,MAINNAME,MAINPAYMENT,MAINDESC,MAINDATE,MAINSTATUS,TECHID,HOMESTAYID) values (3,'Condition-based Maintenance',1000,'Facilities maintenance',to_date('21/02/2023','DD/MM/RRRR'),'Pending',4,null);
+Insert into HOMESTAY.MAINTENANCE (MAINID,MAINNAME,MAINPAYMENT,MAINDESC,MAINDATE,MAINSTATUS,TECHID,HOMESTAYID) values (1,'Preventive Maintenance',300,'Homestay cleaning',to_date('08/04/2023','DD/MM/RRRR'),'Completed',2,1);
+Insert into HOMESTAY.MAINTENANCE (MAINID,MAINNAME,MAINPAYMENT,MAINDESC,MAINDATE,MAINSTATUS,TECHID,HOMESTAYID) values (2,'Corrective Maintenance',600,'Homestay repair',to_date('24/05/2023','DD/MM/RRRR'),'On Hold',3,1);
+Insert into HOMESTAY.MAINTENANCE (MAINID,MAINNAME,MAINPAYMENT,MAINDESC,MAINDATE,MAINSTATUS,TECHID,HOMESTAYID) values (3,'Condition-based Maintenance',1000,'Facilities maintenance',to_date('21/02/2023','DD/MM/RRRR'),'Pending',4,1);
 --------------------------------------------------------
 --  DDL for Index MAINID_PK
 --------------------------------------------------------
