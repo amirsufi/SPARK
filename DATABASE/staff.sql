@@ -1,5 +1,5 @@
 --------------------------------------------------------
---  File created - Saturday-June-24-2023   
+--  File created - Thursday-July-06-2023   
 --------------------------------------------------------
 --------------------------------------------------------
 --  DDL for Table STAFF
@@ -8,10 +8,10 @@
   CREATE TABLE "HOMESTAY"."STAFF" 
    (	"STAFFID" NUMBER(*,0), 
 	"STAFFNAME" VARCHAR2(500 BYTE), 
-	"DOB" DATE DEFAULT sysdate, 
 	"STAFFPHONENO" VARCHAR2(100 BYTE), 
 	"EMAIL" VARCHAR2(500 BYTE), 
-	"SALARY" NUMBER(*,0)
+	"SALARY" NUMBER(*,0), 
+	"PASSWORD" VARCHAR2(20 BYTE)
    ) SEGMENT CREATION IMMEDIATE 
   PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
@@ -19,9 +19,9 @@
   TABLESPACE "SYSTEM" ;
 REM INSERTING into HOMESTAY.STAFF
 SET DEFINE OFF;
-Insert into HOMESTAY.STAFF (STAFFID,STAFFNAME,DOB,STAFFPHONENO,EMAIL,SALARY) values (4,'Nur Alia Hashir',to_date('04/12/1995','DD/MM/RRRR'),'0185340596','alia53@gmail.com',2200);
-Insert into HOMESTAY.STAFF (STAFFID,STAFFNAME,DOB,STAFFPHONENO,EMAIL,SALARY) values (6,'Ghazali Hassan',to_date('01/01/1991','DD/MM/RRRR'),'0100384928','ghazalihassan@gmail.com',1800);
-Insert into HOMESTAY.STAFF (STAFFID,STAFFNAME,DOB,STAFFPHONENO,EMAIL,SALARY) values (7,'Tyra Kamarul',to_date('26/09/1990','DD/MM/RRRR'),'013950093','tyracomel@gmail.com',2200);
+Insert into HOMESTAY.STAFF (STAFFID,STAFFNAME,STAFFPHONENO,EMAIL,SALARY,PASSWORD) values (4,'Nur Alia Hashir','0185340596','alia53@gmail.com',2200,'123');
+Insert into HOMESTAY.STAFF (STAFFID,STAFFNAME,STAFFPHONENO,EMAIL,SALARY,PASSWORD) values (6,'Ghazali Hassan','0100384928','ghazalihassan@gmail.com',1800,'abc');
+Insert into HOMESTAY.STAFF (STAFFID,STAFFNAME,STAFFPHONENO,EMAIL,SALARY,PASSWORD) values (7,'Tyra Kamarul','013950093','tyracomel@gmail.com',2200,'abc123');
 --------------------------------------------------------
 --  DDL for Index STAFFID_PK
 --------------------------------------------------------
