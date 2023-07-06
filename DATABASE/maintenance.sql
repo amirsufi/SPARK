@@ -1,5 +1,5 @@
 --------------------------------------------------------
---  File created - Monday-June-26-2023   
+--  File created - Thursday-July-06-2023   
 --------------------------------------------------------
 --------------------------------------------------------
 --  DDL for Table MAINTENANCE
@@ -12,8 +12,8 @@
 	"MAINDESC" VARCHAR2(500 BYTE), 
 	"MAINDATE" DATE DEFAULT sysdate, 
 	"MAINSTATUS" VARCHAR2(100 BYTE), 
-	"BOOKINGID" NUMBER(*,0), 
-	"TECHID" NUMBER(*,0)
+	"TECHID" NUMBER(*,0), 
+	"HOMESTAYID" NUMBER(*,0)
    ) SEGMENT CREATION IMMEDIATE 
   PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
@@ -21,9 +21,9 @@
   TABLESPACE "SYSTEM" ;
 REM INSERTING into HOMESTAY.MAINTENANCE
 SET DEFINE OFF;
-Insert into HOMESTAY.MAINTENANCE (MAINID,MAINNAME,MAINPAYMENT,MAINDESC,MAINDATE,MAINSTATUS,BOOKINGID,TECHID) values (1,'Preventive Maintenance',300,'Homestay cleaning',to_date('08/04/2023','DD/MM/RRRR'),'Completed',1,2);
-Insert into HOMESTAY.MAINTENANCE (MAINID,MAINNAME,MAINPAYMENT,MAINDESC,MAINDATE,MAINSTATUS,BOOKINGID,TECHID) values (2,'Corrective Maintenance',600,'Homestay repair',to_date('24/05/2023','DD/MM/RRRR'),'On Hold',1,3);
-Insert into HOMESTAY.MAINTENANCE (MAINID,MAINNAME,MAINPAYMENT,MAINDESC,MAINDATE,MAINSTATUS,BOOKINGID,TECHID) values (3,'Condition-based Maintenance',1000,'Facilities maintenance',to_date('21/02/2023','DD/MM/RRRR'),'Pending',1,4);
+Insert into HOMESTAY.MAINTENANCE (MAINID,MAINNAME,MAINPAYMENT,MAINDESC,MAINDATE,MAINSTATUS,TECHID,HOMESTAYID) values (1,'Preventive Maintenance',300,'Homestay cleaning',to_date('08/04/2023','DD/MM/RRRR'),'Completed',2,null);
+Insert into HOMESTAY.MAINTENANCE (MAINID,MAINNAME,MAINPAYMENT,MAINDESC,MAINDATE,MAINSTATUS,TECHID,HOMESTAYID) values (2,'Corrective Maintenance',600,'Homestay repair',to_date('24/05/2023','DD/MM/RRRR'),'On Hold',3,null);
+Insert into HOMESTAY.MAINTENANCE (MAINID,MAINNAME,MAINPAYMENT,MAINDESC,MAINDATE,MAINSTATUS,TECHID,HOMESTAYID) values (3,'Condition-based Maintenance',1000,'Facilities maintenance',to_date('21/02/2023','DD/MM/RRRR'),'Pending',4,null);
 --------------------------------------------------------
 --  DDL for Index MAINID_PK
 --------------------------------------------------------
@@ -47,7 +47,7 @@ Insert into HOMESTAY.MAINTENANCE (MAINID,MAINNAME,MAINPAYMENT,MAINDESC,MAINDATE,
 --  Ref Constraints for Table MAINTENANCE
 --------------------------------------------------------
 
-  ALTER TABLE "HOMESTAY"."MAINTENANCE" ADD CONSTRAINT "BOOKINGID_FK" FOREIGN KEY ("BOOKINGID")
+  ALTER TABLE "HOMESTAY"."MAINTENANCE" ADD CONSTRAINT "HOMESTAYID_FK" FOREIGN KEY ("HOMESTAYID")
 	  REFERENCES "HOMESTAY"."HOMESTAY" ("HOMESTAYID") ENABLE;
   ALTER TABLE "HOMESTAY"."MAINTENANCE" ADD CONSTRAINT "TECHID_FK" FOREIGN KEY ("TECHID")
 	  REFERENCES "HOMESTAY"."TECHNICIAN" ("TECHID") ENABLE;
