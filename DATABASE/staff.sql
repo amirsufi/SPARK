@@ -1,5 +1,5 @@
 --------------------------------------------------------
---  File created - Thursday-July-06-2023   
+--  File created - Thursday-July-13-2023   
 --------------------------------------------------------
 --------------------------------------------------------
 --  DDL for Table STAFF
@@ -11,7 +11,8 @@
 	"STAFFPHONENO" VARCHAR2(100 BYTE), 
 	"EMAIL" VARCHAR2(500 BYTE), 
 	"SALARY" NUMBER(*,0), 
-	"PASSWORD" VARCHAR2(20 BYTE)
+	"PASSWORD" VARCHAR2(20 BYTE), 
+	"ADMINID" NUMBER(*,0)
    ) SEGMENT CREATION IMMEDIATE 
   PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
@@ -19,9 +20,9 @@
   TABLESPACE "SYSTEM" ;
 REM INSERTING into HOMESTAY.STAFF
 SET DEFINE OFF;
-Insert into HOMESTAY.STAFF (STAFFID,STAFFNAME,STAFFPHONENO,EMAIL,SALARY,PASSWORD) values (4,'Nur Alia Hashir','0185340596','alia53@gmail.com',2200,'123');
-Insert into HOMESTAY.STAFF (STAFFID,STAFFNAME,STAFFPHONENO,EMAIL,SALARY,PASSWORD) values (6,'Ghazali Hassan','0100384928','ghazalihassan@gmail.com',1800,'abc');
-Insert into HOMESTAY.STAFF (STAFFID,STAFFNAME,STAFFPHONENO,EMAIL,SALARY,PASSWORD) values (7,'Tyra Kamarul','013950093','tyracomel@gmail.com',2200,'abc123');
+Insert into HOMESTAY.STAFF (STAFFID,STAFFNAME,STAFFPHONENO,EMAIL,SALARY,PASSWORD,ADMINID) values (4,'Nur Alia Hashir','0185340596','alia53@gmail.com',2200,'123',1);
+Insert into HOMESTAY.STAFF (STAFFID,STAFFNAME,STAFFPHONENO,EMAIL,SALARY,PASSWORD,ADMINID) values (6,'Ghazali Hassan','0100384928','ghazalihassan@gmail.com',1800,'abc',1);
+Insert into HOMESTAY.STAFF (STAFFID,STAFFNAME,STAFFPHONENO,EMAIL,SALARY,PASSWORD,ADMINID) values (7,'Tyra Kamarul','013950093','tyracomel@gmail.com',2200,'abc123',1);
 --------------------------------------------------------
 --  DDL for Index STAFFID_PK
 --------------------------------------------------------
@@ -56,3 +57,9 @@ Insert into HOMESTAY.STAFF (STAFFID,STAFFNAME,STAFFPHONENO,EMAIL,SALARY,PASSWORD
   TABLESPACE "SYSTEM"  ENABLE;
   ALTER TABLE "HOMESTAY"."STAFF" MODIFY ("STAFFPHONENO" CONSTRAINT "STAFFPHONENO_NN" NOT NULL ENABLE);
   ALTER TABLE "HOMESTAY"."STAFF" MODIFY ("STAFFNAME" CONSTRAINT "STAFFNAME_NN" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Ref Constraints for Table STAFF
+--------------------------------------------------------
+
+  ALTER TABLE "HOMESTAY"."STAFF" ADD CONSTRAINT "ADMINID_FK" FOREIGN KEY ("ADMINID")
+	  REFERENCES "HOMESTAY"."ADMIN" ("ADMINID") ENABLE;
